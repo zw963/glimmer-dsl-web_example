@@ -1,8 +1,9 @@
 require 'opal'
+require 'opal-browser'
 require 'glimmer-dsl-web'
 require 'fileutils'
 
-Opal.use_gem("opal-jquery")
+Opal.use_gem("opal-browser")
 Opal.use_gem("glimmer-dsl-web")
 
 builder = Opal::Builder.new

@@ -19,7 +19,7 @@ end
 
 @state = State.new
 
-Document.ready? do
+$document.ready? do
     div {
         label('Name: ', for: 'name-field')
         @name_input = input(type: 'text', id: 'name-field', required: true, autofocus: true) {
@@ -31,7 +31,7 @@ Document.ready? do
     }
     button('Greet') {
         onclick do
-          $$.alert("Hello, #{@state.name}!")
+          alert("Hello, #{@state.name}!")
         end
     }
 end

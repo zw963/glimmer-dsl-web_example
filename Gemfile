@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 
 gem "opal", "~> 1.8"
-gem "opal-jquery"
+gem "opal-browser"
 
 gem 'glimmer-dsl-web'
 
