@@ -1,37 +1,11 @@
 include Glimmer
 
-class State
- attr_accessor :name
- attr_accessor :welcome_text
-
- def name=(value)
-    @name = value
-    update_welcome_text
-    puts "update name"
-  end
-
-  private
-
-  def update_welcome_text
-    self.welcome_text = "Welcome! #{@name}"
-  end
-end
-
-@state = State.new
-
-$document.ready? do
-    div {
-        label('Name: ', for: 'name-field')
-        @name_input = input(type: 'text', id: 'name-field', required: true, autofocus: true) {
-            value <=> [@state, :name]
-        }
-    }
-    div {
-        inner_text <= [@state, :welcome_text]
-    }
+Document.ready? do
+  div {
     button('Greet') {
-        onclick do
-          alert("Hello, #{@state.name}!")
-        end
+      onclick do
+        $$.alert('Hello, Button!')
+      end
     }
+  }
 end
